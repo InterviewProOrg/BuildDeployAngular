@@ -22,7 +22,7 @@ jobs:
 
       - name: Log secrets and variables
         run: |
-            echo "Username = ${{ vars.USERNAME }}"
+            echo "Username = ${{ vars.VAR_REUSABLE }}"
             echo "Password = ${{ secrets.PASSWORD }}"
             
       - name: Setup Build Environemnt
