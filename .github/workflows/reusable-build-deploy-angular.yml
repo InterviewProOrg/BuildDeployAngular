@@ -20,11 +20,13 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
 
-      - name: Log secrets and variables
+      - name: Log Secrets and Variables
         run: |
-            echo "Username = ${{ vars.VAR_REUSABLE }}"
-            echo "Password = ${{ secrets.PASSWORD }}"
-            
+          echo "USERNAME = ${{ vars.USERNAME }}
+          echo "REUSABLE USERNAME = ${{ vars.REUSABLE_USERNAME }}
+          echo "PASSWORD = ${{ secrets.PASSWORD }}
+          echo "REUSABLE PASSWORD = ${{ secrets.REUSABLE_PASSWORD }}
+
       - name: Setup Build Environemnt
         id: setup-build-env
         uses: ./.github/actions/SetupBuildEnvironment
