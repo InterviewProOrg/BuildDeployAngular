@@ -9,7 +9,11 @@ on:
       nodejsVersion:
         required: true
         type: string
-
+    
+    secrets:
+      PASSWORD:
+        required: true
+        
 jobs:
   build-angular:
     runs-on: ubuntu-latest
