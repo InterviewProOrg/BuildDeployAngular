@@ -19,7 +19,12 @@ jobs:
      
     steps: 
       - uses: actions/checkout@v4
-      
+
+      - name: Log secrets and variables
+        run: |
+            echo "Username = ${{ vars.USERNAME }}"
+            echo "Password = ${{ secrets.PASSWORD }}"
+            
       - name: Setup Build Environemnt
         id: setup-build-env
         uses: ./.github/actions/SetupBuildEnvironment
