@@ -58,6 +58,10 @@ jobs:
         with:
           name: build-artifact
           path: dist   
+
+      - name: Log pacakge version
+        run: |
+          echo "Package version = 1.0.0.$((github.run_number}}"
           
   deploy-angular:
     runs-on: ubuntu-latest
