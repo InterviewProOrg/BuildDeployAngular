@@ -58,7 +58,7 @@ jobs:
 
       - name: Log package version
         run: |
-          echo "Package version = 1.0.0.${{github.run_number}}"
+          echo "Package version = 1.0.0.${{github.run_number}}" >> $GITHUB_STEP_SUMMARY
           
   deploy-dev:
     name: DEV
