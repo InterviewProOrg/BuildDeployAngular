@@ -59,7 +59,7 @@ jobs:
           name: build-artifact
           path: dist   
 
-      - name: Log pacakge version
+      - name: Log package version
         run: |
           echo "Package version = 1.0.0.$((github.run_number}}"
           
