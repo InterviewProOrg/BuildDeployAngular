@@ -50,9 +50,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Sleep
-        run: sleep 10
-
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -74,7 +71,7 @@ jobs:
      
     steps: 
       - name: Sleep
-        run: sleep 60     
+        run: sleep 5     
 
   
   deploy-qa:
@@ -88,7 +85,7 @@ jobs:
      
     steps: 
       - name: Sleep
-        run: sleep 60   
+        run: sleep 5 
 
   deploy-prod:
     name: PROD
@@ -101,4 +98,4 @@ jobs:
      
     steps: 
       - name: Sleep
-        run: sleep 60           
+        run: sleep 5           
